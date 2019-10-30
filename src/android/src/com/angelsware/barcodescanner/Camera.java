@@ -1,4 +1,4 @@
-package com.angelsware.engine;
+package com.angelsware.barcodescanner;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -10,6 +10,9 @@ import android.content.Intent;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
+
+import com.angelsware.engine.AppActivity;
+import com.angelsware.engine.ActivityResultListener;
 
 public class Camera implements ActivityResultListener {
 	public static native void onBarcodeScanResult(String data, long listener);
@@ -23,7 +26,7 @@ public class Camera implements ActivityResultListener {
 		Activity activity = AppActivity.getActivity();
 		((AppActivity)activity).addActivityResultListener(this);
 		mIntentIntegrator = new IntentIntegrator(AppActivity.getActivity());
-		setText("");
+		mIntentIntegrator.setPrompt("");
 	}
 
 	public void onDestroy() {

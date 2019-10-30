@@ -2,11 +2,11 @@
 #include <platform/android/aw_jnistring.h>
 
 namespace BarcodeScanner {
-	CCamera_Android::CBarcodeScanner_Android()
+	CCamera_Android::CCamera_Android()
 		: mObject("com/angelsware/barcodescanner/Camera", "()V")
 	{}
 
-	CCamera_Android::~CBarcodeScanner_Android() {
+	CCamera_Android::~CCamera_Android() {
 		mObject.callVoidMethod("onDestroy", "()V");
 	}
 
