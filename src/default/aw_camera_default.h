@@ -10,7 +10,7 @@ namespace BarcodeScanner {
 	private:
 		void addListener(ICameraListener* listener) override {}
 		void removeListener(ICameraListener* listener) override {}
-		void removeAllListeners() override {}
+		void clearAllListeners() override {}
 		void scan() override {}
 	};
 }

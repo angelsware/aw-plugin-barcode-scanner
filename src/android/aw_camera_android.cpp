@@ -18,7 +18,7 @@ namespace BarcodeScanner {
 		mObject.callVoidMethod("removeListener", "(J)V", reinterpret_cast<jlong>(listener));
 	}
 
-	void CCamera_Android::removeAllListeners() {
+	void CCamera_Android::clearAllListeners() {
 		mObject.callVoidMethod("removeAllListeners", "()V");
 	}
 

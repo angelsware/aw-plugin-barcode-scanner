@@ -11,7 +11,7 @@ namespace BarcodeScanner {
 
 		virtual void addListener(ICameraListener* listener) = 0;
 		virtual void removeListener(ICameraListener* listener) = 0;
-		virtual void removeAllListeners() = 0;
+		virtual void clearAllListeners() = 0;
 		virtual void scan() = 0;
 	};
 }

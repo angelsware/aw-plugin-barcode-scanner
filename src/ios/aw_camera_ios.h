@@ -1,18 +1,15 @@
-#ifndef __AW_BARCODE_SCANNER_CAMERA_ANDROID_H__
-#define __AW_BARCODE_SCANNER_CAMERA_ANDROID_H__
+#ifndef __AW_BARCODE_SCANNER_CAMERA_IOS_H__
+#define __AW_BARCODE_SCANNER_CAMERA_IOS_H__
 
 #include <barcodescanner/aw_camera.h>
-#include <platform/android/aw_jniclass.h>
 
 namespace BarcodeScanner {
-	class ICameraListener;
-
-	class CCamera_Android
+	class CCamera_Ios
 		: public ICamera
 	{
 	public:
-		CCamera_Android();
-		~CCamera_Android();
+		CCamera_Ios();
+		~CCamera_Ios();
 
 	private:
 		void addListener(ICameraListener* listener) override;
@@ -20,7 +17,7 @@ namespace BarcodeScanner {
 		void clearAllListeners() override;
 		void scan() override;
 
-		Platform::CJniClass mObject;
+		void* mBarcodeScanner;
 	};
 }
 
